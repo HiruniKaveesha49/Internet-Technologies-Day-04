@@ -1,184 +1,369 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MXTX Books Showcase</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            background: radial-gradient(circle at top, rgba(13, 110, 253, 0.12), transparent 36%),
+                linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            color: #212529;
+        }
+
+        .page-header {
+            background: rgba(13, 110, 253, 0.95);
+            color: #fff;
+            padding: 1.4rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 1.25rem;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            letter-spacing: 0.08em;
+        }
+
+        .book-card img,
+        .carousel-inner img {
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .book-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 45px rgba(0, 0, 0, 0.12);
+        }
+
+        .table thead {
+            background: rgba(13, 110, 253, 0.08);
+        }
+
+        .table tbody tr:hover {
+            background: rgba(13, 110, 253, 0.04);
+        }
+
+        footer {
+            background: #0d6efd;
+            color: #fff;
+            padding: 1.2rem 0;
+        }
+
+        .badge-custom {
+            background: rgba(13, 110, 253, 0.15);
+            color: #0d6efd;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-bg-dark text-white p-3 text-center ">MXTX's Books</h1>
-    <p class="bg-danger-subtle align-baseline p-4">My favourite author is MXTX. MXTX means Mo Xiang Toung Xue. It is a
-        feamle author. She is a web novelist. She have written 3 books. Those becomes world famouse books all around the
-        world.</p>
-    <ol class="p-4 align-content-center">
-        <li>Grandmaster of Demonic Cultivation</li>
-        <li>Heaven Official's Blessing</li>
-        <li>Scum Villain's Self-Saving System</li>
-    </ol>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <img src="/img/ssvs.jpg" class="img-fluid" alt="...">
-
-            </div>
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="center-center" class="col-4">
-                <img src="/img/ssvs.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-
-            <div class="col-4">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-            <div class="col-4">
-                <img src="/img/ssvs.jpg" class="img-fluid" alt="...">
-            </div>
-
-            <div class="col-7">
-                <img src="/img/ssvs.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-5">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-
-            <div class="col-12">
-                <p class="justify-content-around">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-                    temporibus quis sequi quisquam, voluptate officia molestias voluptas incidunt exercitationem eius,
-                    ipsam sapiente tempore? Magnam asperiores impedit consequatur quibusdam, quia maiores.
-                    Vel non expedita, sed ipsum et pariatur at dolore repellendus suscipit perspiciatis nemo, </p>
-            </div>
-
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="center-center" class="col-12">
-                <img src="/img/ssvs.jpg" class="img-fluid" alt="...">
-            </div>
-
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">MXTX Book Collection</h1>
+            <p class="lead mb-0">A colorful showcase of three beloved novels by Mo Xiang Tong Xiu.</p>
         </div>
+    </header>
 
-        <!-- grid start -->
+    <main>
+        <section class="container mb-5">
+            <div class="row align-items-center hero p-4" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Why MXTX?</h2>
+                    <p class="fs-6">
+                        Mo Xiang Tong Xiu is one of the most celebrated Chinese web novel authors. Her stories blend
+                        epic
+                        cultivation, emotional drama, and unforgettable characters.
+                    </p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Grandmaster of Demonic Cultivation</li>
+                        <li class="list-group-item">Heaven Official's Blessing</li>
+                        <li class="list-group-item">Scum Villain's Self-Saving System</li>
+                    </ul>
+                    <a href="#books" class="btn btn-primary me-2">Explore the Books</a>
+                    <a href="#characters" class="btn btn-outline-primary">Meet the Characters</a>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <img src="img/ssvs.jpg" class="img-fluid rounded shadow-sm" alt="MXTX books display">
+                </div>
+            </div>
+        </section>
 
-        <!-- <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/img/ssvs.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">SSVS - Scum Villain's Self - Saving System</p>
+        <section id="books" class="container mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="section-title text-center mb-4">Featured Books</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="card book-card h-100">
+                        <img src="img/ssvs.jpg" class="card-img-top" alt="SSVS book cover">
+                        <div class="card-body">
+                            <h5 class="card-title">Scum Villain's Self-Saving System</h5>
+                            <p class="card-text">A time-traveling author is trapped in the body of a villain and must
+                                rewrite fate while discovering unexpected friendship.</p>
+                            <span class="badge badge-custom rounded-pill">Fantasy</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card book-card h-100">
+                        <img src="img/gdzs.jpg" class="card-img-top" alt="GDZS book cover">
+                        <div class="card-body">
+                            <h5 class="card-title">Grandmaster of Demonic Cultivation</h5>
+                            <p class="card-text">A powerful cultivator returns from death and uncovers secrets that
+                                reshape the balance between compassion and power.</p>
+                            <span class="badge badge-custom rounded-pill">Cultivation</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card book-card h-100">
+                        <img src="img/hob.jpg" class="card-img-top" alt="HOB book cover">
+                        <div class="card-body">
+                            <h5 class="card-title">Heaven Official's Blessing</h5>
+                            <p class="card-text">A fallen prince climbs from disaster to divinity, uncovering love,
+                                redemption, and a haunting truth.</p>
+                            <span class="badge badge-custom rounded-pill">Romance</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="container mb-5" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title text-center mb-4">Character Highlights</h2>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card p-3 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Scum Villain's Self-Saving System</h3>
+                            <div id="carousel1" class="carousel slide mb-4" data-bs-ride="carousel">
+                                <div class="carousel-inner rounded overflow-hidden shadow-sm">
+                                    <div class="carousel-item active">
+                                        <img src="img/Shen Qingqiu.webp" class="d-block w-100" alt="Shen Qingqiu">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/Luo Binghe.webp" class="d-block w-100" alt="Luo Binghe">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/Yue QingYuan.jpg" class="d-block w-100" alt="Yue QingYuan">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-borderless align-middle text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Character</th>
+                                            <th>Role</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Shen Qingqiu</td>
+                                            <td>Peak Lord</td>
+                                            <td>A modern transmigrator forced to play the villain while avoiding
+                                                disaster.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Luo Binghe</td>
+                                            <td>Protagonist</td>
+                                            <td>A powerful half-demon whose loyalty becomes an enduring and tragic love.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Yue Qingyuan</td>
+                                            <td>Sect Leader</td>
+                                            <td>A patient leader with a hidden past connected to Shen Qingqiu's fate.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/img/gdzs.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">GDZS - Grandmaster of Demonic Cultivation</p>
+                <div class="col-lg-6">
+                    <div class="card p-3 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Grandmaster of Demonic Cultivation</h3>
+                            <div id="carousel2" class="carousel slide mb-4" data-bs-ride="carousel">
+                                <div class="carousel-inner rounded overflow-hidden shadow-sm">
+                                    <div class="carousel-item active">
+                                        <img src="img/wei wuxian.webp" class="d-block w-100" alt="Wei Wuxian">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/lan zhan.webp" class="d-block w-100" alt="Lan Wangji">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/jiang cheng.jpg" class="d-block w-100" alt="Jiang Cheng">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-borderless align-middle text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Character</th>
+                                            <th>Role</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Wei Wuxian</td>
+                                            <td>Founder</td>
+                                            <td>A brilliant cultivator who defies the rules and becomes a legend.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Lan Wangji</td>
+                                            <td>Stoic Guardian</td>
+                                            <td>A disciplined cultivator with a hidden heart that mourns and protects.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Jiang Cheng</td>
+                                            <td>Brother</td>
+                                            <td>Short-tempered and loyal, he carries a painful grudge and fierce love.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/img/hob.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">HOBS - Heaven Official's Blessing</p>
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6">
+                    <div class="card p-3 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Heaven Official's Blessing</h3>
+                            <div id="carousel3" class="carousel slide mb-4" data-bs-ride="carousel">
+                                <div class="carousel-inner rounded overflow-hidden shadow-sm">
+                                    <div class="carousel-item active">
+                                        <img src="img/xie lian.webp" class="d-block w-100" alt="Xie Lian">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/Hua Cheng.jpg" class="d-block w-100" alt="Hua Cheng">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/feng xin.jpg" class="d-block w-100" alt="Feng Xin">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-borderless align-middle text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Character</th>
+                                            <th>Role</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Xie Lian</td>
+                                            <td>God</td>
+                                            <td>A fallen prince who seeks redemption and the truth behind calamities.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Hua Cheng</td>
+                                            <td>King of Ghosts</td>
+                                            <td>A mysterious figure bound to Xie Lian by loyalty and fierce love.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Feng Xin</td>
+                                            <td>General</td>
+                                            <td>A solemn warrior with deep devotion to justice.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">Designed to highlight the most iconic books and characters from MXTX's stories.</p>
         </div>
-    </div> -->
+    </footer>
 
-        <!-- card start -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 
-        <!-- <div class="card" style="width: 18rem;">
-        <img src="/img/ssvs.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-        </div>
-    </div> -->
+    <script src="js/app.js"></script>
 
-        <!-- carousel start -->
-        <!-- <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/img/ssvs.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/img/gdzs.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/img/hob.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div> -->
-
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <script>
-            AOS.init();
-        </script>
 </body>
 
 </html>
