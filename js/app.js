@@ -31,3 +31,63 @@
 
 // console.log(x===y);
 
+let x = 10;
+let y = 20;
+
+if( x > y ){
+    console.log("x is greater than y");
+}else if( x < y ){
+    console.log("x is less than y");
+}else{
+    console.log("x is equal to y");
+}
+
+let day = 1;
+
+switch(true){
+case day === 1:
+console.log("Monday");
+break;
+case day === 2:
+console.log("Tuesday");
+break;
+case day = 3:           
+console.log("Wednesday");
+break;
+}
+
+for(let i=0; i<5; i++){
+    console.log(i);
+}   
+
+while(x < 20){
+    console.log(x);
+    x++;
+}
+
+do{
+    console.log(x);
+    x++;
+}while(x < 20);     
+
+function add(a, b){
+    return a + b;
+}       
+
+//array
+
+let numbers = [1, 2, 3, 4, 5];
+
+for(let i=0; i<numbers.length; i++){
+    console.log(numbers[i]);
+}   
+
+customers ={
+    name: "John Doe",
+    age: 25,
+    isStudent: true
+}
+
+console.log(customers.name);
+console.log(customers.age);
+console.log(customers.isStudent);
